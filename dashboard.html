@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | WorkWave</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/workwave-logo-transparent.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="dashboard">
+    <div class="app-shell">
+      <nav class="nav">
+        <a class="brand" href="dashboard.html">
+          <img
+            class="brand-logo"
+            src="assets/workwave-logo-transparent.png"
+            alt="WorkWave logo"
+          />
+        </a>
+
+        <div class="nav-links">
+          <a data-nav-link="dashboard" href="dashboard.html">Dashboard</a>
+          <a data-nav-link="tasks" href="tasks.html">Tasks</a>
+          <a data-nav-link="profile" href="profile.html">Profile</a>
+        </div>
+
+        <div class="nav-actions">
+          <div class="user-pill" id="userGreeting">Builder</div>
+          <button type="button" id="logoutButton" class="logout-btn">
+            LOGOUT
+          </button>
+        </div>
+      </nav>
+
+      <main class="page-shell">
+        <section class="page-header">
+          <div>
+            <h1>Workspace Overview</h1>
+            <p class="panel-copy">
+              Track current workload, deployment flow, and the next task to move
+              forward.
+            </p>
+          </div>
+
+          <a class="secondary-link" href="tasks.html">Open task board</a>
+        </section>
+
+        <section class="cards stats-grid">
+          <article class="card stat-card">
+            <p>Total Tasks</p>
+            <h2 id="totalTasks">0</h2>
+            <span>Total Project </span>
+          </article>
+
+          <article class="card stat-card">
+            <p>Pending</p>
+            <h2 id="pendingTasks">0</h2>
+            <span>Projects Waiting For Build Time</span>
+          </article>
+
+          <article class="card stat-card">
+            <p>In Progress</p>
+            <h2 id="progressTasks">0</h2>
+            <span>Items actively being built</span>
+          </article>
+
+          <article class="card stat-card">
+            <p>Deployed</p>
+            <h2 id="deployedTasks">0</h2>
+            <span>Completed and shipped work</span>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="card">
+            <div class="section-heading">
+              <h2>Latest Movement</h2>
+              <span id="completionRate">0% shipped</span>
+            </div>
+            <div class="progress-rail">
+              <span id="completionBar"></span>
+            </div>
+            <div id="recentTasks" class="summary-list"></div>
+          </article>
+
+          <article class="card">
+            <div class="section-heading">
+              <h2>Profile Snapshot</h2>
+              <a class="secondary-link" href="profile.html">Edit profile</a>
+            </div>
+            <div class="profile-summary">
+              <h3 id="dashboardProfileName">Builder profile</h3>
+              <p id="dashboardProfileRole">No role saved yet.</p>
+              <p id="dashboardProfileAbout">
+                Add your about section to make the prototype feel like a real
+                product.
+              </p>
+              <div class="profile-meta">
+                <span id="dashboardProfilePortfolio">Portfolio not set</span>
+                <span id="dashboardProfileContact">Contact not set</span>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

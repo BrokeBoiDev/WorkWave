@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | WorkWave</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/workwave-logo-transparent.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="profile">
+    <div class="app-shell">
+      <nav class="nav">
+        <a class="brand" href="dashboard.html">
+          <img
+            class="brand-logo"
+            src="assets/workwave-logo-transparent.png"
+            alt="WorkWave logo"
+          />
+        </a>
+
+        <div class="nav-links">
+          <a data-nav-link="dashboard" href="dashboard.html">Dashboard</a>
+          <a data-nav-link="tasks" href="tasks.html">Tasks</a>
+          <a data-nav-link="profile" href="profile.html">Profile</a>
+        </div>
+
+        <div class="nav-actions">
+          <div class="user-pill" id="userGreeting">Builder</div>
+          <button type="button" id="logoutButton" class="logout-btn">
+            LOGOUT
+          </button>
+        </div>
+      </nav>
+
+      <main class="page-shell">
+        <section class="page-header">
+          <div>
+            <h1>Store the public-facing builder details</h1>
+            <p class="panel-copy">
+              This page updates the local preview and the dashboard summary in
+              real time.
+            </p>
+          </div>
+        </section>
+
+        <section class="profile-container">
+          <form id="profileForm" class="profile-card">
+            <label class="field">
+              <span>Name</span>
+              <input type="text" id="profileName" placeholder="Jordan Reyes" />
+            </label>
+
+            <label class="field">
+              <span>Role</span>
+              <input
+                type="text"
+                id="profileRole"
+                placeholder="Frontend Developer"
+              />
+            </label>
+
+            <label class="field">
+              <span>About</span>
+              <textarea
+                id="profileAbout"
+                placeholder="Describe what you build and who you help."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>Portfolio / Projects</span>
+              <textarea
+                id="profilePortfolio"
+                placeholder="workwave.dev, github.com/you, shipped case studies"
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>Contact</span>
+              <input
+                type="text"
+                id="profileContact"
+                placeholder="builder@workwave.dev"
+              />
+            </label>
+
+            <button type="submit">Save Profile</button>
+          </form>
+
+          <article class="profile-preview">
+            <p class="eyebrow">Live Preview</p>
+            <h1 id="previewName">Builder Name</h1>
+            <h3 class="preview-role" id="previewRole">Role</h3>
+            <p id="previewAbout">
+              Add an about section to make the product feel complete.
+            </p>
+
+            <div class="preview-block">
+              <h3>Portfolio</h3>
+              <p id="previewPortfolio">No portfolio links saved yet.</p>
+            </div>
+
+            <div class="preview-block">
+              <h3>Contact</h3>
+              <p id="previewContact">No contact information saved yet.</p>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks | WorkWave</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/workwave-logo-transparent.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="tasks">
+    <div class="app-shell">
+      <nav class="nav">
+        <a class="brand" href="dashboard.html">
+          <img
+            class="brand-logo"
+            src="assets/workwave-logo-transparent.png"
+            alt="WorkWave logo"
+          />
+        </a>
+
+        <div class="nav-links">
+          <a data-nav-link="dashboard" href="dashboard.html">Dashboard</a>
+          <a data-nav-link="tasks" href="tasks.html">Tasks</a>
+          <a data-nav-link="profile" href="profile.html">Profile</a>
+        </div>
+
+        <div class="nav-actions">
+          <div class="user-pill" id="userGreeting">Builder</div>
+          <button type="button" id="logoutButton" class="logout-btn">
+            LOGOUT
+          </button>
+        </div>
+      </nav>
+
+      <main class="page-shell">
+        <section class="page-header">
+          <div>
+            <h1>Move work from idea to shipped</h1>
+            <p class="panel-copy">
+              Add tasks, assign a type, then drag them across the board as they
+              progress.
+            </p>
+          </div>
+        </section>
+
+        <section class="card composer-card">
+          <form id="taskForm" class="task-form">
+            <label class="field">
+              <span>Task title</span>
+              <input
+                type="text"
+                id="taskInput"
+                placeholder="Build login handoff flow"
+              />
+            </label>
+
+            <label class="field">
+              <span>Type</span>
+              <select id="taskType">
+                <option value="Feature">Feature</option>
+                <option value="Bug">Bug</option>
+                <option value="Improvement">Improvement</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Due Date</span>
+              <input type="date" id="taskDueDate" />
+            </label>
+
+            <button type="submit">Add Task</button>
+          </form>
+        </section>
+
+        <section class="task-board">
+          <article class="task-column">
+            <div class="section-heading">
+              <h2>Pending</h2>
+            </div>
+            <div id="pending" class="task-lane" data-status="pending"></div>
+          </article>
+
+          <article class="task-column">
+            <div class="section-heading">
+              <h2>In Progress</h2>
+            </div>
+            <div id="progress" class="task-lane" data-status="progress"></div>
+          </article>
+
+          <article class="task-column">
+            <div class="section-heading">
+              <h2>Deployed</h2>
+            </div>
+            <div id="deployed" class="task-lane" data-status="deployed"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

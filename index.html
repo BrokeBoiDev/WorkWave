@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorkWave</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/workwave-logo-transparent.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="auth-page" data-page="auth">
+    <main class="login-container">
+      <section class="login-hero">
+        <p class="hero-kicker">Frontend Prototype</p>
+        <img
+          class="hero-logo"
+          src="assets/workwave-logo-transparent.png"
+          alt="WorkWave logo"
+        />
+        <h1>Build. Track. Deploy.</h1>
+        <p>
+          A browser-based workspace for tracking tasks from idea to deployed.
+          This deployment is a front-end prototype designed for demos and UI
+          review.
+        </p>
+
+        <div class="prototype-bullets">
+          <p>Use any email to enter the prototype.</p>
+          <p>Tasks and profile data are stored locally in this browser.</p>
+          <p>No backend or real authentication is connected yet.</p>
+        </div>
+      </section>
+
+      <section class="login-card">
+        <h2>Enter the prototype</h2>
+        <p>Start a local session to explore the dashboard, task board, and profile flow.</p>
+
+        <form id="loginForm" class="login-form">
+          <label class="field" for="email">
+            <span>Email</span>
+            <input type="email" id="email" placeholder="you@example.com" />
+          </label>
+          <button type="submit">Open Workspace</button>
+          <p class="prototype-note">
+            Deployment note: this prototype keeps all state in local storage on
+            this device.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
